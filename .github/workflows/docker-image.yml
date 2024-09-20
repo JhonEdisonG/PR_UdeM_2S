@@ -28,11 +28,11 @@ jobs:
 
     # Etiquetar la imagen con el hash del commit
     - name: Tag Docker image with commit hash
-      run: docker tag clases_udem:latest JhonEdisonG/github_actions:${{ github.sha }}
+      run: docker tag clases_udem:latest jhonedisong/github_actions:${{ github.sha }}
 
     # Subir la imagen a Docker Hub
     - name: Push Docker image to Docker Hub
-      run: docker push JhonEdisonG/github_actions:${{ github.sha }}
+      run: docker push jhonedisong/github_actions:${{ github.sha }}
 
     # Ejecutar el contenedor a partir de la imagen Docker
     - name: Run Docker container
